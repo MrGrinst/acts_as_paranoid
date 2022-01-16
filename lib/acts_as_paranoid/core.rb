@@ -257,7 +257,7 @@ module ActsAsParanoid
 
         klass
           .only_deleted.merge(get_association_scope(assoc))
-          .each(&:destroy!)
+          .each(&:destroy_fully!)
       end
     end
 
